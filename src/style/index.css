@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    
+}
+body {
+    height: 100vh;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 9px;
+  }
+
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: rgba(12, 74, 110, 0.3);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #0c4a6e;
+    border-radius: 100vh;
+    border: 1px solid darkgrey;
+}
+
+.icon {
+    display: inline-block;
+    mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg);
+    mask-size: cover;
+    background: white;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.clickable {   
+    cursor: pointer;
+}
+.ratio {
+    height: 200px;
+    width: 200px;
+}
+.radar {
+    height: 600px !important;
+    width: 600px !important;
+}
+.material-symbols-outlined {
+    font-size: 28px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+
+}
+.imgTooltip {
+    position: relative;
+}
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    bottom: 101%;
+    left: -30%;
+    position: absolute;
+    z-index: 1;
+}
+.imgTooltip:hover .tooltip {
+    visibility: visible;
+}
