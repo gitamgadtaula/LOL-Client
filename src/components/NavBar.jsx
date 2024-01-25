@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getRegionName, showError, hideError } from "../scripts";
+import logo from "../img/logo.png";
 
 export default function NavBar(props) {
   const API_KEY = process.env.REACT_APP_API_KEY;
@@ -94,14 +95,12 @@ export default function NavBar(props) {
       id="navbar"
       className="fixed flex flex-row flex-nowrap justify-between items-center z-10 w-full h-16 pr-4 pl-4 backdrop-blur-md shadow-sm shadow-slate-800"
     >
-      <div onClick={pageRefresh} style={{ cursor: "pointer" }}>
-        <img
-          loading="lazy"
-          src="//siriusnet.io/wp-content/uploads/2022/09/1d1ddasddffd.png"
-          srcSet="//siriusnet.io/wp-content/uploads/2022/09/1d1ddasddffd.png 2x"
-          alt="Siriusnet"
-          className="w-36"
-        ></img>{" "}
+      <div
+        onClick={pageRefresh}
+        style={{ cursor: "pointer" }}
+        className="bg-white"
+      >
+        <img loading="lazy" src={logo} alt="LeagueData" className="w-16"></img>{" "}
         {/* <img
           src="https://media.licdn.com/dms/image/D560BAQHc_Y8GIaqw7A/company-logo_200_200/0/1686983106139/siriusnet_logo?e=2147483647&v=beta&t=O3Xjtq7rVSvh58g0AFkfG7tFTXC-n_H5-Kz-oVMkMtE"
           alt="logo"
@@ -118,7 +117,7 @@ export default function NavBar(props) {
           id="searchBar"
           type="text"
           placeholder="Summoner name here"
-          onKeyPress={handleGet}
+          onKeyDown={handleGet}
           className="w-64 h-10 p-2 rounded-r outline-none text-gray-900 font-medium"
         />
       </div>

@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import ErrorCard from './components/ErrorCard';
 import { useEffect, useState } from 'react';
 
-
 function App() {
   const [patch, setPatch] = useState("");
   const [currentAcc, setCurrentAcc] = useState({});
